@@ -6,7 +6,6 @@ RUN bun install
 COPY . .
 RUN bun run build
 
-# DEBUG: Print directory structure to Railway logs.
 # This helps you verify exactly where the built index.html is located.
 RUN echo "=== ROOT DIRECTORY ===" && ls -la /app \
     && echo "=== DIST DIRECTORY ===" && ls -la /app/dist
