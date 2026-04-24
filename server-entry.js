@@ -48,7 +48,7 @@ async function serveStatic(req, res) {
 
 const { default: server } = await import("./dist/server/server.js");
 
-const port = parseInt(process.env.PORT || "3000", 10);
+const port = parseInt(process.env.PORT || "8080", 10);
 
 createServer(async (req, res) => {
   if (await serveStatic(req, res)) return;
